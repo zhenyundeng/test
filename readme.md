@@ -1,4 +1,4 @@
-|        Method            | Multi-hop Retrieval| Multi-hop Retrieval | Multi-hop Reasoning | Multi-hop Retrieval |
+|        Method            | Multi-hop Retrieval| Multi-hop Retrieval | Multi-hop Reasoning | Multi-hop Reasoning |
 |--------------------------|:------------------:|:------------------:|:------------------:|:------------------:|
 |                          |        EM        |        F1        |        EM        |        F1        |
 | Beam Retrieval           |        97.63        |        98.71        |        72.62        | 85.70 |
