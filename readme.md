@@ -1,6 +1,6 @@
 |        Method            | Multi-hop Retrieval| Multi-hop Retrieval | Multi-hop Reasoning | Multi-hop Reasoning |
 |--------------------------|:------------------:|:------------------:|:------------------:|:------------------:|
-|                          |        EM        |        F1        |        EM        |        F1        |
+|                          |        EM           |        F1           |        EM           |        F1        |
 | Beam Retrieval           |        97.63        |        98.71        |        72.62        | 85.70 |
 | Coreference              |        97.69        |        98.73        |        72.62        | 85.88 |
 | T5-11B                   |        98.32        |        99.04        |        74.16        | 87.11 |
