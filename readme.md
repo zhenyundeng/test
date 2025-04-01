@@ -1,4 +1,4 @@
-|                          | \multicolumn{2}{c|}{Multi-hop retrieval} | \multicolumn{2}{c}{Multi-hop reasoning} |
+|                          | \multicolumn{2}{c|}{Multi-hop retrieval} | \multicolumn{2}{c}{Multi-hop reasoning} | \multicolumn{2}{c}{Multi-hop reasoning} |
 |--------------------------|------------------|------------------|------------------|------------------|
 |                          | EM               | F1               | EM               | F1               |
 | Beam Retrieval          | 97.63            | 98.71            | 72.62            | 85.70            |
