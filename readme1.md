@@ -7,19 +7,19 @@ Unlike iterative subgraph expansion methods such as PullNet [1] or SR [2], which
 
 Moreover, we adopt SPRING [3], a state-of-the-art AMR parser, in combination with BLINK [4] for entity linking. These tools have been shown to perform robustly across multiple NLP tasks. As shown in Table 2 and Table 3, our method achieves notable improvements in both quality and QA accuracy on the WebQSP and CWQ datasets. These results demonstrate that the current quality of AMR parsing is sufficient for practical KBQA applications.
 
-**W2**: *The paper does not explicitly discuss how the method scales to extremely long or nested AMR paths.*
+> **W2**: *The paper does not explicitly discuss how the method scales to extremely long or nested AMR paths.*
 
 While real-world questions can indeed yield long or nested AMR paths, our method is explicitly designed to handle such complexity effectively. As described in Section 3.2 and illustrated in Figure 2 (AMR Graph → AMR Relationships), we avoid treating the AMR path as a monolithic structure. Instead, we decompose it into a sequence of predicate-argument units, each representing a localized semantic relation.
 
 This decomposition enables the system to incrementally isolate and extract meaningful relations, thereby minimizing the impact of overall path length or structural depth. Consequently, our approach remains robust and scalable when dealing with extended reasoning chains and deeply nested semantic representations.
 
-**W3**: *The additional steps may introduce latency, but runtime efficiency is not evaluated.*
+> **W3**: *The additional steps may introduce latency, but runtime efficiency is not evaluated.*
 
 While our method introduces additional steps, such as AMR parsing and semantic relation extraction, the overall computational cost of the subgraph retrieval module is relatively low compared to the reasoning module. In our implementation, the runtime bottleneck primarily lies in the reasoning stage, which aligns with prior findings in KBQA literature (e.g., SR [1], NSM [5]).
 
 Moreover, our method produces more compact subgraphs by filtering out semantically irrelevant nodes and relations (see Table 2). This not only improves subgraph quality but also reduces the reasoning workload, resulting in better overall efficiency.
 
-**Comment 1**:  *The paper mentions "noisy nodes" in baseline methods but does not quantify noise reduction in the proposed method.*
+> **Comment 1**:  *The paper mentions "noisy nodes" in baseline methods but does not quantify noise reduction in the proposed method.*
 
 We follow the evaluation protocol introduced in SR [1], where subgraph quality is assessed through three interrelated metrics: subgraph size, answer coverage rate, and final QA performance. Specifically, Table 2 reports the number of nodes and relations in the retrieved subgraphs, while Table 3 shows the answer coverage and QA accuracy.
 
