@@ -1,7 +1,7 @@
 # Reviewer 6EkM
 We thank the reviewer for the valuable comments. Detailed responses to each specific comment are provided below.
 
-**W1**: *The method heavily relies on the quality of AMR parsing. Errors in parsing or entity linking could propagate to subgraph retrieval and reasoning.*
+> **W1**: *The method heavily relies on the quality of AMR parsing. Errors in parsing or entity linking could propagate to subgraph retrieval and reasoning.*
 
 Unlike iterative subgraph expansion methods such as PullNet [1] or SR [2], which rely on multi-hop traversal from the topic entity and are thus prone to compounding errors during expansion. Instead, our method uses AMR to impose global semantic constraints that guide subgraph retrieval. This design inherently mitigates the propagation of parsing or linking errors throughout the graph.
 
