@@ -33,23 +33,23 @@ Compared to baseline methods, our approach produces significantly smaller subgra
 
 # Reviewer PHMs
 
-**W1**: *This paper does not compare with LLM-based approaches.*
+> **W1**: *This paper does not compare with LLM-based approaches.*
 
 While we acknowledge the recent progress in LLM-based QA systems, our method addresses a complementary problem. Specifically, our focus is on high-quality subgraph retrieval over structured knowledge graphs using semantic signals from AMR graphs. In contrast, most LLM-based methods, such as those based on retrieval-augmented generation (RAG), emphasize text generation over unstructured or semi-structured sources, and do not explicitly retrieve or evaluate graph substructures.
 
 Additionally, our approach is model-agnostic and can be integrated with LLMs. For example, the AMR-constrained subgraphs produced by our method could be used as an external context for LLMs, offering better control and interpretability in multi-hop reasoning. We agree that direct comparisons or integrations with LLM-based KBQA methods (e.g., with tool-augmented prompting) are promising directions, and we plan to explore them in future work.
 
-**W2**: *Paper Structure and Typos*
+> **W2**: *Paper Structure and Typos*
 
 We thank the reviewer for the constructive suggestions. We will improve the structure and flow of the paper, enhance figure and algorithm annotations, and correct typos throughout the manuscript.
 
-**W3**: *Missing Baselines (NuTrea, RAH-KBQA)*
+> **W3**: *Missing Baselines (NuTrea, RAH-KBQA)*
 
 We appreciate the reviewer’s suggestion to compare with recent advances such as NuTrea [1] and RAH-KBQA [2]. These methods focus on improving the reasoning process over a given subgraph, employing neural tree search or dual-graph representation to better capture entity-relation interactions. In contrast, our work addresses a different stage of the KBQA pipeline—the retrieval of high-quality subgraphs using AMR-guided semantic matching. Notably, both NuTrea and RAH-KBQA assume the subgraph is pre-extracted from the seed entity using simple neighborhood expansion strategies. Their papers do not provide detailed descriptions or learning-based designs for subgraph retrieval, nor do they explicitly evaluate subgraph quality.
 
 We believe our approach is complementary to these methods. The AMR-driven subgraph retrieval technique we propose could serve as a plug-in front-end to improve the reasoning accuracy of such models by providing cleaner, semantically aligned subgraphs. We plan to explore such integrations in future work.
 
-**W4**:  *Subgraph Quality, Efficiency, and Ground-Truth Coverage*
+> **W4**:  *Subgraph Quality, Efficiency, and Ground-Truth Coverage*
 
 We appreciate the reviewer’s suggestion to report the inclusion ratio of ground-truth relations. However, existing datasets such as WebQSP and CWQ do not provide gold-labeled reasoning paths or relation sequences. While it is common practice to approximate ground-truth paths using the shortest paths from the topic entity to the answer entity, this heuristic does not always reflect the true reasoning logic needed to answer the question, as we discuss in Section 3.5.
 
@@ -57,11 +57,11 @@ In our evaluation, we follow the metrics commonly used in prior work such as SR 
 
 As for inference efficiency, although we do not report explicit runtime figures, our method employs the same reasoning model as the baselines. Because our retrieved subgraphs are significantly smaller, the reasoning component processes fewer nodes and edges, resulting in shorter inference time under equivalent model configurations.
 
-**W5**:  *Implementation Details*
+> **W5**:  *Implementation Details*
 
 We acknowledge the need for more implementation details. In the final version, we will provide a comprehensive description of the key components, including AMR parser configurations, relation extraction procedures, similarity threshold settings, and training parameters. We will also release the code and datasets to support reproducibility.
 
-**Comment 1**: *Clarity and Writing Issues*
+> **Comment 1**: *Clarity and Writing Issues*
 
 We will revise Section 2 to better highlight the differences between our method and prior AMR-based approaches, particularly in how we leverage AMR to constrain subgraph retrieval rather than directly generating symbolic query graphs.
 
