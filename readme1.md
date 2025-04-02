@@ -3,7 +3,7 @@ We thank the reviewer for the valuable comments. Detailed responses to each spec
 
 **W1**: *The method heavily relies on the quality of AMR parsing. Errors in parsing or entity linking could propagate to subgraph retrieval and reasoning.*
 
-Unlike iterative subgraph expansion methods such as PullNet [1] or SR [2], which rely on multi-hop traversal from the topic entity, and thus prone to compounding errors during expansion. Instead, we use AMR to impose global semantic constraints that guide subgraph retrieval. This design inherently mitigates the propagation of parsing or linking errors throughout the graph.
+Unlike iterative subgraph expansion methods such as PullNet [1] or SR [2], which rely on multi-hop traversal from the topic entity and are thus prone to compounding errors during expansion. Instead, our method uses AMR to impose global semantic constraints that guide subgraph retrieval. This design inherently mitigates the propagation of parsing or linking errors throughout the graph.
 
 Moreover, we adopt SPRING [3], a state-of-the-art AMR parser, in combination with BLINK [4] for entity linking. These tools have been shown to perform robustly across multiple NLP tasks. As shown in Table 2 and Table 3, our method achieves notable improvements in both quality and QA accuracy on the WebQSP and CWQ datasets. These results demonstrate that the current quality of AMR parsing is sufficient for practical KBQA applications.
 
