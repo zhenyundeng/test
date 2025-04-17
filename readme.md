@@ -22,10 +22,12 @@
 
 Thanks for your valuable suggestions.
 
-> Q1: More baselines should be included in the final version of the paper. 
+> Q1: More baselines should be included in the final version of the paper.
+
 We will include all baselines we provided during the rebuttal in the final version of our paper.
 
 > Q2: Adding discussions about the efficiency of our approach compared to vanilla prompting
+
 We acknowledge that our method involves additional steps, including EDU segmentation, ambiguous EDU identification, relevant EDU selection and EDU decontextualisation, which inevitably leads to increased computation time during inference.
 
 To assess the trade-off between performance and efficiency, we analyse it on the dev set of the benchmark dataset. The comparison of efficiency between our approach and Vanilla prompting is shown in the following table:
