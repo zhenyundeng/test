@@ -1,5 +1,4 @@
-
-# Evaluation 
+ # Evaluation 
 The new AVeriTeC scoring follows a similar approach to FEVER and considers the correctness of the verdict label conditioned on the correctness of the evidence retrieved. If a claim is labelled as supported, refuted, conflicting evidence/cherry-picking, additionally the evidence will be checked against the list of annotated evidence. The label will only be considered correct if the EV2R recall score between the provided evidence and the annotated evidence is at least 0.44. The scoring script can be found on the <a href="https://fever.ai/dataset/averitec.html">AVeriTeC Dataset page</a>. A detailed explanation of the scoring metric can be found in <a href="https://arxiv.org/abs/2411.05375">this paper.</a>  
 
 For the <a href="https://arxiv.org/abs/2411.05375">new AVeriTeC score (Ev2R)</a> following changes are made to the FEVER scorer:  
